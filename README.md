@@ -1,13 +1,13 @@
 # Morse Code Arduino Project
 
-## 📌 Description
+## Description
 This project converts input signals into Morse code using an Arduino Uno R3.  
 The output is provided through a buzzer and displayed on an OLED screen.  
 A push button is used for input.
 
 ---
 
-## ⚙️ Components Used
+## Components Used
 - Arduino Uno R3
 - I2C OLED Display (SSD1306)
 - Buzzer
@@ -16,7 +16,7 @@ A push button is used for input.
 
 ---
 
-## 🔌 Circuit Connections
+## Circuit Connections
 
 | Component        | Arduino Uno R3 Pin |
 |-----------------|-------------------|
@@ -31,20 +31,20 @@ A push button is used for input.
 
 ---
 
-## 🧠 Working
+## Working
 - Button press generates Morse input  
 - Buzzer outputs dot/dash sounds  
 - OLED displays corresponding characters  
 
 ---
 
-## ⚠️ Notes
+## Notes
 - Button uses INPUT_PULLUP (no external resistor needed)  
 - OLED uses I2C protocol (usually address 0x3C)  
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 - Add keyboard/text input  
 - Improve decoding accuracy  
 - Add LED indicators  
