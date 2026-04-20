@@ -1,17 +1,4 @@
-/* OLED DISPLAY (I2C):
- * SDA -> A4 
- * SCL -> 
- * VCC -> 3.3V
- * GND -> GND
- * 
- * BUZZER:
- * + -> D4
- * - -> GND
- * 
- * BUTTON:
- * One side -> D2
- * Other side -> GND
- */
+
 
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -26,12 +13,12 @@ Adafruit_SH1106G display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 #define BUTTON_PIN 2  // Button between D2 and GND
 #define BUZZER_PIN 4  // Buzzer+ to D4, buzzer- to GND
 
-// Morse timing in milliseconds (more forgiving)
-const int DOT_DURATION = 200;      // 0.2s dot
-const int DASH_DURATION = 400;     // 0.4s dash
-const int SYMBOL_GAP = 200;        // 0.2s between symbols
-const int LETTER_TIMEOUT = 1000;   // 1s to complete letter
-const int WORD_TIMEOUT = 3000;     // 2s for word space
+// Morse timing in milliseconds 
+const int DOT_DURATION = 200;      
+const int DASH_DURATION = 400;     
+const int SYMBOL_GAP = 200;     
+const int LETTER_TIMEOUT = 1000; 
+const int WORD_TIMEOUT = 3000;     
 
 String morseInput = "";
 String decodedMessage = "";
@@ -73,7 +60,7 @@ void handleButton() {
     if (pressDuration < 400) { // Under 0.4s = dot
       morseInput += ".";
       blinkDot();
-    } else { // 0.4s or longer = dash
+    } else { 
       morseInput += "-";
       blinkDash();
     }
