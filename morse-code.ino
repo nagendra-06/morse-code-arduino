@@ -8,8 +8,8 @@
 #define SCREEN_ADDRESS 0x3C
 Adafruit_SH1106G display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-#define BUTTON_PIN 2  // Button between D2 and GND
-#define BUZZER_PIN 4  // Buzzer+ to D4, buzzer- to GND
+#define BUTTON_PIN 2  
+#define BUZZER_PIN 4  
 
 // Morse timing in milliseconds 
 const int DOT_DURATION = 200;      
